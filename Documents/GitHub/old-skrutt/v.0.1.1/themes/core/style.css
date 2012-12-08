@@ -1,0 +1,32 @@
+/** 
+* Description: Core theme for Skrutt
+*/
+
+/**
+* Structure
+*/
+html{}
+body{
+   background-color:#eee;
+   background-image:url('img/bg.png');
+   background-repeat: repeat;
+   font: 1em Verdana, Arial, Helvetica, sans-serif;
+}
+
+/*#header,
+#main,
+#footer*/
+#wrapper{
+   margin:0 auto;
+   width:970px;
+   background-color:#fff;
+   padding: 1em;
+   -moz-hyphens:auto;
+   -ms-hyphens:auto;
+   -webkit-hyphens:auto;
+   hyphens:auto;
+   word-wrap:break-word;
+   
+   moz-border-radius: 35px;
+   border-radius: 35px;
+}
