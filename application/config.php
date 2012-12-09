@@ -63,7 +63,7 @@ $sk->config['session_key']  = 'skrutt';
 
 
 /**
- * Define server timezone
+ * Define default server timezone when displaying date and times to the user. All internals are still UTC.
  */
 $sk->config['timezone'] = 'Europe/Stockholm';
 
@@ -93,6 +93,9 @@ $sk->config['controllers'] = array(
   'index'     => array('enabled' => true,'class' => 'CCIndex'),
   'developer' => array('enabled' => true,'class' => 'CCDeveloper'),
   'guestbook' => array('enabled' => true,'class' => 'CCGuestbook'),
+  'content'   => array('enabled' => true,'class' => 'CCContent'),
+  'blog'      => array('enabled' => true,'class' => 'CCBlog'),
+  'page'      => array('enabled' => true,'class' => 'CCPage'),
   'user'      => array('enabled' => true,'class' => 'CCUser'),
   'acp'       => array('enabled' => true,'class' => 'CCAdminControlPanel'),
 );

@@ -160,4 +160,4 @@ class CCUser extends CObject implements IController {
   }
   
 
-}
+} 
