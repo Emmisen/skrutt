@@ -41,4 +41,4 @@ class CCPage extends CObject implements IController {
   }
 
 
-} 
+}
