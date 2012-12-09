@@ -2,7 +2,7 @@
 /**
  * A utility class to easy creating and handling of forms
  * 
- * @package SkruttCore
+ * @package LydiaCore
  */
 class CFormElement implements ArrayAccess{
 
@@ -22,8 +22,8 @@ class CFormElement implements ArrayAccess{
   public function __construct($name, $attributes=array()) {
     $this->attributes = $attributes;    
     $this['name'] = $name;
-    if(is_callable('CSkrutt::Instance()')) {
-      $this->characterEncoding = CSkrutt::Instance()->config['character_encoding'];
+    if(is_callable('CLydia::Instance()')) {
+      $this->characterEncoding = CLydia::Instance()->config['character_encoding'];
     } else {
       $this->characterEncoding = 'UTF-8';
     }
@@ -67,11 +67,11 @@ class CFormElement implements ArrayAccess{
     }
     
     if($type && $this['type'] == 'submit') {
-        return "<p><input id='$id'{$type}{$class}{$name}{$value}{$autofocus}{$readonly} /></p>\n";
+      return "<span><input id='$id'{$type}{$class}{$name}{$value}{$autofocus}{$readonly} /></span>\n";
     } else if($type && $this['type'] == 'textarea') {
-        return "<p><label for='$id'>$label</label><br><textarea id='$id'{$type}{$class}{$name}{$autofocus}{$readonly}>{$onlyValue}</textarea></p>\n"; 
+      return "<p><label for='$id'>$label</label><br><textarea id='$id'{$type}{$class}{$name}{$autofocus}{$readonly}>{$onlyValue}</textarea></p>\n"; 
     } else if($type && $this['type'] == 'hidden') {
-        return "<input id='$id'{$type}{$class}{$name}{$value} />\n"; 
+      return "<input id='$id'{$type}{$class}{$name}{$value} />\n"; 
     } else {
       return "<p><label for='$id'>$label</label><br><input id='$id'{$type}{$class}{$name}{$value}{$autofocus}{$readonly} />{$messages}</p>\n";			  
     }
@@ -292,7 +292,16 @@ EOD;
    */
   public function GetHTMLForElements() {
     $html = null;
+    $buttonbar = null;
     foreach($this->elements as $element) {
+      // Wrap buttons in buttonbar.
+      if(!$buttonbar && $element['type'] == 'submit') {
+        $buttonbar = true;
+        $html .= '<p>';
+      } else if($buttonbar && $element['type'] != 'submit') {
+        $buttonbar = false;
+        $html .= '</p>\n';
+      }
       $html .= $element->GetHTML();
     }
     return $html;
