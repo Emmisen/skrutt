@@ -6,8 +6,14 @@
 /**
  * Add static entries in the template file. 
  */
-$sk->data['header'] = '<h1>Header: Skrutt</h1>';
+$sk->data['header'] = 'Skrutt';
+$sk->data['slogan'] = 'A PHP-based MVC-inspired CMF';
+$sk->data['favico']         = theme_url('img/favicon2.png');
+$sk->data['logo']         = theme_url('img/skrutt.png');
+$sk->data['logo_width']   = 90;
+$sk->data['logo_height']  = 90;
 $sk->data['footer'] = <<<EOD
+<hr/>
 <p>Footer: &copy; Skrutt by Emma Iwald-Bäckman, 2012</p>
 
 <p>Tools: 

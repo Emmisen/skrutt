@@ -1,9 +1,9 @@
 <?php
 /**
-* Interface for classes implementing a controller.
-*
-* @package SkruttCore
-*/
+ * Interface for classes implementing a controller.
+ *
+ * @package SkruttCore
+ */
 interface IController {
-  public function Index();
+	public function Index();
 }
