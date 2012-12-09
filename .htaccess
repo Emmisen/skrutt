@@ -1,7 +1,7 @@
 <IfModule mod_rewrite.c>
   RewriteEngine on
-  # Must use RewriteBase on www.student.bth.se, Rewritebase for url /~embj12/phpmvc/kmom02/lydia is /~embj12/phpmvc/kmom02/lydia/
-  RewriteBase /~embj12/phpmvc/kmom03/skrutt/
+  # Must use RewriteBase on www.student.bth.se, Rewritebase for url /~embj12/phpmvc/kmom04/lydia is /~embj12/phpmvc/kmom04/lydia/
+  RewriteBase /~embj12/phpmvc/kmom04/skrutt/
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule (.*) index.php/$1 [NC,L]

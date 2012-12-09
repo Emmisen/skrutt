@@ -30,13 +30,23 @@ body{
 }
 
 /**
+ * Login menu
+ */
+#login-menu{float:right;font-size:smaller;}
+#login-menu img.gravatar{vertical-align:middle;}
+#login-menu a{text-decoration:none;}
+#login-menu a:hover{text-decoration:underline;}
+
+
+
+/**
  * Headings
  */
 h1{border-bottom:3px double #ccc;padding-bottom:4px;}
 h2{border-bottom:1px solid #ccc;padding-bottom:4px;}
 
 
-#header{display:table;}
+#banner{display:table;}
 .site-logo,
 .site-title,
 .site-slogan {display:table-cell;width:inherit;text-align:left; color:#333;padding-bottom: 20px;vertical-align:middle;text-shadow:#ccc 2px -2px 2px;}
@@ -60,3 +70,5 @@ padding: 0.8em; margin-bottom: 1em; border: 2px solid #ddd; }
 .success a         { color: #264409; }
 .info a            { color: #205791; }
 
+.validation-failed{border:2px solid red;}
+.validation-message{color:red;font-size:smaller;}
