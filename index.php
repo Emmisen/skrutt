@@ -30,5 +30,3 @@ $sk->FrontControllerRoute();
 // PHASE: THEME ENGINE RENDER
 //
 $sk->ThemeEngineRender();
-
-
