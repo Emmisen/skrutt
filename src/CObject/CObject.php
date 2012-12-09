@@ -1,6 +1,6 @@
 <?php
 /**
- * Holding a instance of CLydia to enable use of $this in subclasses and provide some helpers.
+ * Holding a instance of CSkrutt to enable use of $this in subclasses and provide some helpers.
  *
  * @package SkruttCore
  */

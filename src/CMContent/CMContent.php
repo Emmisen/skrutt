@@ -83,7 +83,7 @@ class CMContent extends CObject implements IHasSQL, ArrayAccess {
   }
   
 
-  /**
+ /**
    * Save content. If it has a id, use it to update current entry or else insert new entry.
    *
    * @returns boolean true if success else false.

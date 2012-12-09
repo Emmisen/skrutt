@@ -92,6 +92,7 @@ $sk->config['language'] = 'en';
 $sk->config['controllers'] = array(
   'index'     => array('enabled' => true,'class' => 'CCIndex'),
   'developer' => array('enabled' => true,'class' => 'CCDeveloper'),
+  'theme'     => array('enabled' => true,'class' => 'CCTheme'),
   'guestbook' => array('enabled' => true,'class' => 'CCGuestbook'),
   'content'   => array('enabled' => true,'class' => 'CCContent'),
   'blog'      => array('enabled' => true,'class' => 'CCBlog'),
@@ -100,10 +101,28 @@ $sk->config['controllers'] = array(
   'acp'       => array('enabled' => true,'class' => 'CCAdminControlPanel'),
 );
 
+
 /**
  * Settings for the theme.
  */
 $sk->config['theme'] = array(
-  // The name of the theme in the theme directory
-  'name'    => 'core', 
+  'name'            => 'grid',            // The name of the theme in the theme directory
+  'stylesheet'      => 'style.php',       // Main stylesheet to include in template files
+  'template_file'   => 'index.tpl.php',   // Default template file, else use default.tpl.php
+  // A list of valid theme regions
+  'regions' => array('flash','featured-first','featured-middle','featured-last',
+    'primary','sidebar','triptych-first','triptych-middle','triptych-last',
+    'footer-column-one','footer-column-two','footer-column-three','footer-column-four',
+    'footer',
+  ),
+  // Add static entries for use in the template file. 
+  'data' => array(
+    'header' => 'Skrutt',
+    'slogan' => 'A PHP-based MVC-inspired CMF',
+    'favicon' => 'img/favicon2.png',
+    'logo' => 'img/skrutt.png',
+    'logo_width'  => 90,
+    'logo_height' => 90,
+    'footer' => '<p>Skrutt &copy; by Emma Iwald-Bäckman</p>',
+  ),
 );
