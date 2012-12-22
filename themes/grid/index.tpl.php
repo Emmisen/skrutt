@@ -3,28 +3,26 @@
 <head>
   <meta charset='utf-8'/>
   <title><?=$title?></title>
-  <link rel='shortcut icon' href='<?=theme_url($favicon)?>'/>
-  <link rel='stylesheet' href='<?=theme_url($stylesheet)?>'/>
+	<link rel='shortcut icon' href='<?=theme_url($favicon)?>'/>
+  <link rel='stylesheet' href='<?=$stylesheet?>'/>
   <?php if(isset($inline_style)): ?><style><?=$inline_style?></style><?php endif; ?>
 </head>
 <body>
 <div id="wrapper">
-	<div id='outer-wrap-header'>
-	  <div id='inner-wrap-header'>
-	    <div id='header'>
-	      <div id='login-menu'><?=login_menu()?></div>
-	      <div id='banner'>
-		<a href='<?=base_url()?>'><img id='site-logo' src='<?=theme_url($logo)?>' alt='logo' width='<?=$logo_width?>' height='<?=$logo_height?>' /></a>
-		<span id='site-title'><a href='<?=base_url()?>'><?=$header?></a></span>
-		<span id='site-slogan'><?=$slogan?></span>
-	      </div>
-	      <?php if(region_has_content('navbar')): ?>
-	      <div id='navbar'><?=render_views('navbar')?></div>
-	      <?php endif; ?>
-	    </div>
+	<div id="header">
+	  <div id='login-menu'>
+	 	<?=login_menu()?>
 	  </div>
-	</div>
-	
+	  <div id="banner">
+		  <a href='<?=base_url()?>'>
+			<img class='site-logo' src='<?=theme_url($logo)?>' alt='logo' width='<?=$logo_width?>' height='<?=$logo_height?>' />
+		    </a>
+		    <p class='site-title'><?=$header?></p>
+		    <p class='site-slogan'><?=$slogan?></p>
+	   </div>
+	   <hr/>
+	  </div>
+
 	<div id="inner-wrap">
 		<?php if(region_has_content('flash')): ?>
 		<div id='outer-wrap-flash'>
@@ -61,21 +59,21 @@
 		</div>
 		<?php endif; ?>
 	</div>
-	
 	<div id="footer">
-		<div id='outer-wrap-footer'>
-		  <?php if(region_has_content('footer-column-one', 'footer-column-two', 'footer-column-three', 'footer-column-four')): ?>
-		  <div id='inner-wrap-footer-column'>
-		    <div id='footer-column-one'><?=render_views('footer-column-one')?></div>
-		    <div id='footer-column-two'><?=render_views('footer-column-two')?></div>
-		    <div id='footer-column-three'><?=render_views('footer-column-three')?></div>
-		    <div id='footer-column-four'><?=render_views('footer-column-four')?></div>
-		  </div>
-		  <?php endif; ?>
-		  <div id='inner-wrap-footer'>
-		    <div id='footer'><?=render_views('footer')?><?=$footer?><?=get_tools()?><?=get_debug()?></div>
-		  </div>
-		</div>
+	<hr/>
+	<div id='outer-wrap-footer'>
+	  <?php if(region_has_content('footer-column-one', 'footer-column-two', 'footer-column-three', 'footer-column-four')): ?>
+	  <div id='inner-wrap-footer-column'>
+	    <div id='footer-column-one'><?=render_views('footer-column-one')?></div>
+	    <div id='footer-column-two'><?=render_views('footer-column-two')?></div>
+	    <div id='footer-column-three'><?=render_views('footer-column-three')?></div>
+	    <div id='footer-column-four'><?=render_views('footer-column-four')?></div>
+	  </div>
+	  <?php endif; ?>
+	  <div id='inner-wrap-footer'>
+	    <div id='footer'><?=render_views('footer')?><?=$footer?><?=get_tools()?><?=get_debug()?></div>
+	  </div>
+	</div>
 	</div>
 </div>
 </body>

@@ -42,7 +42,7 @@ class CCGuestbook extends CObject implements IController {
       $this->guestbookModel->DeleteAll();
     }
     elseif(isset($_POST['doCreate'])) {
-      $this->guestbookModel->init();
+      $this->guestbookModel->Init();
     }            
     $this->RedirectTo($this->request->CreateUrl($this->request->controller));
   }
