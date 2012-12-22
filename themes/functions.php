@@ -171,29 +171,16 @@ function base_url($url=null) {
  * @param string the extra arguments to the method, leave empty if not using method.
  */
 function create_url($urlOrController=null, $method=null, $arguments=null) {
-  return CSkrutt::Instance()->CreateUrl($urlOrController, $method, $arguments);
+  return CSkrutt::Instance()->request->CreateUrl($urlOrController, $method, $arguments);
 }
 
 
 /**
  * Prepend the theme_url, which is the url to the current theme directory.
- *
- * @param $url string the url-part to prepend.
- * @returns string the absolute url.
  */
 function theme_url($url) {
-  return create_url(CSkrutt::Instance()->themeUrl . "/{$url}");
-}
-
-
-/**
- * Prepend the theme_parent_url, which is the url to the parent theme directory.
- *
- * @param $url string the url-part to prepend.
- * @returns string the absolute url.
- */
-function theme_parent_url($url) {
-  return create_url(CSkrutt::Instance()->themeParentUrl . "/{$url}");
+  $sk = CSkrutt::Instance();
+  return "{$sk->request->base_url}themes/{$sk->config['theme']['name']}/{$url}";
 }
 
 

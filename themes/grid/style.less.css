@@ -152,7 +152,7 @@ textarea{width:100%;height:8em;}
  * HTML & Body
  */
 html{background-color:@bgcolor1;.alwaysShowScrollbar()}
-body{margin:0;padding:0;color:@color;background-color:@bgcolor2;
+body{margin:0;padding:0;
 //  &:hover{background:#fff url(grid_12_60_20.png) repeat-y center top;}
 }  
 
