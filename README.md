@@ -60,6 +60,6 @@ If you want your new page to show up in the navigation menu, all you have to do 
 2. scroll down to "Define menus."
 3. add a line at the end of <code>'my-navbar' => array(</code>
 
-Example -> <code>'page' => array('label'=>'page', 'url'=>'page/view/9'),)</code>
+Example -> <code>'page' => array('label'=>'page', 'url'=>'page/view/9'),</code>
 
 
