@@ -57,7 +57,7 @@ function auto_compile_less($less_fname, $css_fname, $cache_ext='.cache') {
 
 
 // Compile and output the resulting css-file, use caching whenever suitable.
-$less = 'style.less.css';
+$less = 'style.less';
 $css  = 'style.css';
 $cache_extension = '.cache';
 $changed = auto_compile_less($less, $css, $cache_extension);
@@ -68,4 +68,4 @@ if(!$changed && isset($_SERVER['If-Modified-Since']) && strtotime($_SERVER['If-M
   header('Content-type: text/css');  
   header('Last-Modified: ' . gmdate("D, d M Y H:i:s",$time) . " GMT");  
   readfile($css);  
-}  
+}

@@ -1,11 +1,32 @@
 /** 
- * Description: Sample theme for site which extends the Lydia grid-theme.
+ * Description: Sample theme for site which extends the Skrutt grid-theme.
  */
 @import url(../../../themes/grid/style.css);
 
+/* Here is your theme. If you want to change the look on your site, just follow
+these easy instructions*/
+
+/*Here you can change the base look on Skrutt. Like it's background color, 
+and wall-paper (background-image). You can also change it's base font, and
+text color.*/
+body{
+   background-color:#eee;
+   background-image:url('img/bg.png');
+   background-repeat: repeat;
+   color:#000;
+   font: 14px Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+/*Do you want another color on your boarder? or maybe no border at all?
+That's what you change here*/
 #wrapper{
 	border: 3px solid #9980a1;
 }
+
+/*Here is your headers look. The round corners, background-color of the 
+header, and it's bottom-border. If you wanna change these things, it's done here*/
+
 #outer-wrap-header{
    background-color:#f6f1f8;
    border-bottom:2px solid #c0a8c8; 
@@ -16,14 +37,10 @@
    margin-right:-14px;
    margin-bottom: 14px;
 }
-#inner-wrap-header{
-  padding-left:14px;
-  padding-right:14px;
-  padding-top:14px;
-  padding-bottom: 4px;
-}
 
 
+/*Here is your footers look. The round corners, background-color of the 
+header, and it's bottom-border. If you wanna change these things, it's done here*/
 #outer-wrap-footer{
    background-color:#f6f1f8; 
    moz-border-radius: 0px 0px 35px 35px;
@@ -32,14 +49,14 @@
    margin-right: -14px;
    margin-left: -14px;
 }
-#inner-wrap-footer{
-   padding-top: 2px;
-   padding-bottom: 14px;
-   padding-right: 14px;
-   padding-left: 14px;
+
+
+/*Don't you like the background-color, which the navigation burns turns into, as 
+you hold your mouse-pointer over it? That's what you change here*/
+#navbar ul.menu li a:hover {
+  background-color:#dddddd;
+  border:2px solid #c0a8c8;
 }
-   
-#navbar ul.menu li a.selected{
-   background-color:#c5b7c8;
-   border-bottom:none;
-}
+
+
+/*For more advanced changes, go into themes/grid/style.css */

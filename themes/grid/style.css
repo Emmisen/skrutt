@@ -6,12 +6,6 @@
 * Structure
 */
 html {  overflow-y: scroll;  } 
-body{
-   background-color:#eee;
-   background-image:url('img/bg.png');
-   background-repeat: repeat;
-   font: 1em Verdana, Arial, Helvetica, sans-serif;
-}
 
 
 #wrapper{
@@ -38,6 +32,19 @@ margin: 0 auto;
 padding-bottom: 15px;
 }
 
+#inner-wrap-header{
+  padding-left:14px;
+  padding-right:14px;
+  padding-top:14px;
+  padding-bottom: 4px;
+}
+
+#inner-wrap-footer{
+   padding-top: 2px;
+   padding-bottom: 14px;
+   padding-right: 14px;
+   padding-left: 14px;
+}
 /**
  * Login menu
  */
@@ -47,6 +54,30 @@ padding-bottom: 15px;
 #login-menu a:hover{text-decoration:underline;}
 
 
+table{
+	margin:0;
+  padding:0;
+  border:0;
+  font-size:100.01%;
+  font:inherit;
+  vertical-align:baseline;
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+
+/* Tables. Because of the need for padding on TH and TD, the vertical rhythm
+  on table cells has to be 33px, instead of the standard 22px or 44px
+  of other elements. */
+table{margin-bottom:1.375em;width:100%;}
+caption{text-align:left;font-style:italic;}
+thead{border-bottom:2px solid #000;}
+th{vertical-align:bottom;font-weight:bold;text-align:left;}
+th,td{padding:5px 10px 5px 5px;}
+tbody tr:nth-child(even) td, tbody tr.even td {}
+tbody tr{border-bottom:1px solid #c0a8c8;
+  &:hover{color:#000;}
+}
 
 /**
  * Headings
@@ -54,14 +85,32 @@ padding-bottom: 15px;
 h1{border-bottom:3px double #ccc;padding-bottom:4px;}
 h2{border-bottom:1px solid #ccc;padding-bottom:4px;}
 
-
+#banner #site-title a { text-decoration:none; }
 #banner{display:table;}
-.site-logo,
-.site-title,
-.site-slogan {display:table-cell;width:inherit;text-align:left; color:#333;padding-bottom: 20px;vertical-align:middle;text-shadow:#ccc 2px -2px 2px;}
-.site-title  {font-size:5.4em;font-family:Brush Script Std;}
-.site-slogan {font-size:1.3em; padding-left:20px;}
-.site-logo   {padding-right:10px;}
+#site-logo,
+#site-title,
+#site-slogan {display:table-cell;width:inherit;text-align:left; color:#333;padding-bottom: 20px;vertical-align:middle;text-shadow:#ccc 2px -2px 2px;}
+#site-title  {font-size:5.4em;font-family:Brush Script Std;}
+#site-slogan {font-size:1.3em; padding-left:20px;}
+#site-logo   {padding-right:10px;}
+
+
+/**
+ * User feedback message wrappers.
+ */
+ 
+/*.error, .alert, .warning, .notice, .success, .info { 
+padding: 0.8em; margin-bottom: 1em; border: 2px solid #ddd; }
+
+.error, .alert { background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; }
+.notice, .warning { background: #fff6bf; color: #514721; border-color: #ffd324; }
+.success       { background: #e6efc2; color: #264409; border-color: #c6d880; }
+.info          { background: #d5edf8; color: #205791; border-color: #92cae4; }
+.error a, .alert a { color: #8a1f11; }
+.notice a, .warning a { color: #514721; }
+.success a         { color: #264409; }
+.info a            { color: #205791; }*/
+
 
 #navbar{
 padding-top: 10px;
