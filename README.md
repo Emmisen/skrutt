@@ -2,6 +2,16 @@ skrutt
 ====================================
 Skrutt is a MVC inspired framework for webdevolpment. 
 To see the framwork, go to <code>http://www.student.bth.se/~embj12/phpmvc/kmom08-Exam/skrutt/page/view/9</code>
+To logg in:
+Username: doe
+password: doe
+
+or 
+
+Username: root
+Password: root
+
+You can also create your own account to logg in.
 
 Do you like what you see?
 
