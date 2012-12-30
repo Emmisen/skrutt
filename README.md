@@ -29,7 +29,9 @@ Open the file <code>skrutt/application/config.php</code>
 scroll down to "Settings for the theme. The theme may have a parent theme."
 <code>$sk->config['theme'] = array(</code>
 
-Here you can change logo, webbplatsens titel, footer and navigation menu
+Here you can change logo, webbplatsens titel, footer and navigation menu.
+
+If you wanna change the look of your framework, you can also go into <code>skrutt/application/themes/mytheme/style.css</code>
 
 
 Create a new blog entry.
