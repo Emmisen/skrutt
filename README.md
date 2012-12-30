@@ -12,6 +12,7 @@ Installation
 
 1. Clone skrutt from github: <code>https://github.com/Emmisen/skrutt</code>
 2. Make the application/data writeable: <code>cd skrutt; chmod 777 application/data</code>
+
 (Both the map and the file in the map, most be chmod 777)
 3. Open the .htaccess file, and change the adress to your installation
  <code>RewriteBase /~embj12/phpmvc/kmom08/skrutt/</code>
