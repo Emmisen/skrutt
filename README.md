@@ -1,7 +1,7 @@
 skrutt
 ====================================
 Skrutt is a MVC inspired framework for webdevolpment. 
-To see the framwork, go to <code>http://www.student.bth.se/~embj12/phpmvc/kmom08-Exam/skrutt/page/view/9</code>
+To see the framwork, go to <code>http://www.student.bth.se/~embj12/phpmvc/kmom08-Exam3/skrutt/page/view/9</code>
 To logg in:
 _____________________
 Username: doe

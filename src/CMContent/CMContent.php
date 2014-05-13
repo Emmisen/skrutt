@@ -79,7 +79,8 @@ class CMContent extends CObject implements IHasSQL, ArrayAccess, IModule {
           $this->db->ExecuteQuery(self::SQL('insert content'), array('download', 'page', 'Download page', "This is a demo page, this could be your personal download-page.\n\nYou can download your own copy of Skrutt from https://github.com/Emmisen/skrutt.", 'plain', $this->user['id']));
           $this->db->ExecuteQuery(self::SQL('insert content'), array('bbcode', 'page', 'Page with BBCode', "This is a demo page with some BBCode-formatting.\n\n[b]Text in bold[/b] and [i]text in italic[/i] and [url=http://dbwebb.se]a link to dbwebb.se[/url]. You can also include images using bbcode, such as the Skrutt logo: [img]http://www.student.bth.se/~embj12/phpmvc/kmom07/skrutt/themes/grid/img/skrutt.png[/img]", 'bbcode', $this->user['id']));
           $this->db->ExecuteQuery(self::SQL('insert content'), array('htmlpurify', 'page', 'Page with HTMLPurifier', "This is a demo page with some HTML code intended to run through <a href='http://htmlpurifier.org/'>HTMLPurify</a>. Edit the source and insert HTML code and see if it works.\n\n<b>Text in bold</b> and <i>text in italic</i> and <a href='http://dbwebb.se'>a link to dbwebb.se</a>. JavaScript, like this: <javascript>alert('hej');</javascript> should however be removed.", 'htmlpurify', $this->user['id']));
-          return array('success', 'Successfully created the database tables and created a default "Hello World" blog post, owned by you.');
+		$this->db->ExecuteQuery(self::SQL('insert content'), array('exam', 'page', 'exam page', "Welcome to the Exam-page", 'plain', $this->user['id']));          
+		return array('success', 'Successfully created the database tables and created a default "Hello World" blog post, owned by you.');
         } catch(Exception$e) {
           die("$e<br/>Failed to open database: " . $this->config['database'][0]['dsn']);
         }

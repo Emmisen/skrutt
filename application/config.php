@@ -127,11 +127,15 @@ $sk->config['menus'] = array(
     'guestbook' => array('label'=>'Guestbook', 'url'=>'guestbook'),
     'blog'      => array('label'=>'Blog', 'url'=>'blog'),
   ),
+ 
+  /*Here is the navigation meny. To make your new page link in the navbar, just add here.
+It can look something like :  'page' => array('label'=>'page', 'url'=>'view/page/9'),*/
+
   'my-navbar' => array(
     'home'      => array('label'=>'About Me', 'url'=>'my'),
     'blog'      => array('label'=>'My Blog', 'url'=>'my/blog'),
     'guestbook' => array('label'=>'Guestbook', 'url'=>'my/guestbook'),
-    'page' => array('label'=>'page', 'url'=>'page/view/9'),
+    'Exam' => array('label'=>'Exam', 'url'=>'page/view/9'),
   ),
 );
 
@@ -172,7 +176,7 @@ $sk->config['theme'] = array(
     'footer',
   ),
   
-  /*Dear Skrutt usar. To change favicon, header-text, or logo, change these settings*/
+  /*Dear Skrutt user. To change favicon, header-text, or logo, change these settings*/
   
   'menu_to_region' => array('my-navbar'=>'navbar'),
   'data' => array(
