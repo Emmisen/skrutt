@@ -27,7 +27,7 @@ Installation
 2. Make the application/data writeable: <code>cd skrutt; chmod 777 application/data</code>
 (Both the map and the file in the map, most be chmod 777)
 3. Open the .htaccess file, and change the adress to your installation
- <code>RewriteBase /~embj12/phpmvc/kmom08/skrutt/</code>
+ <code>RewriteBase /~embj12/phpmvc/kmom08-Exam3/skrutt/</code>
 4. Point your webbbrowser to your skrutt, and follow the instruction!
 <code>module/install</code>
 
